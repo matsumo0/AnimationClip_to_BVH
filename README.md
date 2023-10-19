@@ -1,7 +1,7 @@
 # AnimationClip_to_BVH
 
 AnimationClip_to_BVH は、 Emiliana さんのUnityアセットである BVH Tools に追加して使うことで、
-1つAnimationClipをBVHファイルに変換することができる補助的なC#スクリプトです。(VRM形式のアバターを想定)
+1つのAnimationClipをBVHファイルに変換することができる補助的なC#スクリプトです。(VRM形式のアバターを想定)
 BVHファイルを記録・作成するなどほとんどの処理はBVH Toolsに行っていただいており、AnimationClip_to_BVHが行うのは
 必要な情報入力の補助と、1アニメーションの始まりと終わりのタイミングでのカットのみです。
 
