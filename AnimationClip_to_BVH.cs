@@ -166,11 +166,9 @@ public class AnimationClip_to_BVH : MonoBehaviour
         bvh_recorder.enforceHumanoidBones = true;
         bvh_recorder.targetAvatar = ava_animator;
         bvh_recorder.rootBone = hips_t;
-        bvh_recorder.bones = new List<Transform>(){
+        bvh_recorder.bones = new List<Transform>(){ // 必須のボーン
                                 hips_t,
                                 spine_t,
-                                chest_t,
-                                neck_t,
                                 leftUpperLeg_t,
                                 leftLowerLeg_t,
                                 leftFoot_t,
@@ -186,6 +184,8 @@ public class AnimationClip_to_BVH : MonoBehaviour
                                 head_t
                             };
         #region 必須でないボーンは存在する場合のみボーンリストに追加する
+        if( neck_t != null ) bvh_recorder.bones.Add( neck_t );
+        if( chest_t != null ) bvh_recorder.bones.Add( chest_t );
         if( upperChest_t != null ) bvh_recorder.bones.Add( upperChest_t );
         if( leftToes_t != null ) bvh_recorder.bones.Add( leftToes_t );
         if( rightToes_t != null ) bvh_recorder.bones.Add( rightToes_t );
